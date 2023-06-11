@@ -27,7 +27,7 @@ int i2cSetup(int addr)
 	int file;
 	char filename[40];
 
-	sprintf(filename, "/dev/i2c-1");
+	sprintf(filename, "/dev/i2c-0"); // For Raspberry Pi, use /dev/i2c-1.  Orange Pi Zero uses /dev/i2c-0 in the same pin configuration
 
 	if ( (file = open(filename, O_RDWR)) < 0)
 	{
